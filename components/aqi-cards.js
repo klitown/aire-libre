@@ -9,13 +9,13 @@ const data = [
     {
         rango: '0-50 | Libre',
         descripcion: 'Escaso riesgo de contaminación atmosférica, calidad de aire satisfactoria.',
-        icon: AiFillLike,
+        icon: IoIosHappy,
         color: 'green.500'
     },
     {
         rango: '51-100 | Maso',
         descripcion: 'Calidad de aire aceptable, riesgo moderado para la salud de personas sensibles a la contaminación ambiental.',
-        icon: IoIosHappy,
+        icon: AiFillLike,
         color: 'yellow.400'
     },
     {
@@ -47,7 +47,7 @@ const data = [
 const AqiCards = () => {
     return (
         <>
-            <Container mt='10' maxW='container.md'>
+            <Container mt='10' maxW='container.md' mb="10">
                 <Text as="div" align='center' mb='8' fontFamily='Nunito' fontSize='4xl'>
                     Escala AQI
                     <Box as='div' fontSize='sm' fontWeight='normal'>

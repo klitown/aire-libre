@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 
 
 const MyAwesomeMap = dynamic(
-    () => import("./Map"), 
+    () => import("./Map"),
     { ssr: false }
 )
 
@@ -25,18 +25,22 @@ const Inicio = () => {
                         <IconButton
                             size='lg'
                             aria-label='Icon twitter'
+                            onClick={() => window.location.href = 'https://twitter.com/KoaNdeAire'}
                             icon={<AiOutlineTwitter />}
                         />
                         <IconButton
                             size='lg'
                             aria-label='Icon github'
+                            onClick={() => window.location.href = 'https://github.com/melizeche/AireLibre/'}
                             icon={<AiFillGithub />}
                         />
                     </Stack>
                 </Box>
             </Flex>
             <Container mt='16' maxW='container.md' centerContent>
-                <Text fontFamily='Nunito' fontSize='4xl'> ¿Qué es aire libre? </Text>
+                <Text fontFamily='Nunito' fontSize='4xl' >
+                    ¿Qué es <Text as='span' color='green.400'> aire libre</Text>?
+                </Text>
                 <Text mt='8' fontFamily='Nunito' fontSize='xl' marginLeft={{ base: 0, sm: 10, md: 0, lg: 0 }}>
                     <Text as='span' color='green.400'> Aire libre </Text> es una respuesta de la comunidad a la necesidad de saber
                     sobre la calidad del aire de
@@ -44,8 +48,8 @@ const Inicio = () => {
                 </Text>
                 <Divider mt='10' />
             </Container>
-            <AqiCards/>
             <MyAwesomeMap />
+            <AqiCards />
         </>
     );
 }
